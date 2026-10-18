@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yasmin Hawary — AI & Data Science</title>
+<meta name="description" content="Portfolio of Yasmin Hawary — Computer Science & Artificial Intelligence Student.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { darkMode: 'class', theme: { extend: {
+  fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['"Space Grotesk"','Inter','system-ui','sans-serif'] },
+  colors: {
+    accent: { DEFAULT: '#a8714a' },
+    slate: { 50:'#fffaf4',100:'#f8efe3',200:'#eadccb',300:'#dccab5',400:'#c4ab92',500:'#8f7561',600:'#7a604d' },
+    sky: { 100:'#f7ebd9',200:'#ecd7ba',400:'#d4a574',500:'#c8956a',700:'#86593a' },
+    indigo: { 100:'#fde7ee',400:'#e9a3bb' } } } } }
+</script>
+<style>
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 72px); }
+  body { background: linear-gradient(180deg,#fffaf3 0%,#fdf3ec 100%); }
+  .glow { position: absolute; inset: auto; width: 420px; height: 420px; border-radius: 9999px; filter: blur(110px); opacity: .22; pointer-events: none; background: #ecd2ae; }
+  .card { transition: transform .25s, border-color .25s, box-shadow .25s; }
+  .card:hover { transform: translateY(-4px); border-color: #38bdf8; box-shadow: 0 10px 40px -12px rgba(56,189,248,.35); }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s, transform .6s; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body class="font-sans text-slate-500 antialiased">
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="sticky z-50 border-b border-slate-200/70 bg-[#fffaf4]/80 backdrop-blur" style="top:env(safe-area-inset-top,0px)">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 h-16" aria-label="Main">
+    <a href="#home" class="font-display font-bold text-lg text-slate-600">YH<span class="text-accent">.</span></a>
+    <ul class="hidden md:flex gap-7 text-sm font-medium">
+      <li><a class="hover:text-accent transition" href="#about">About</a></li>
+      <li><a class="hover:text-accent transition" href="#skills">Skills</a></li>
+      <li><a class="hover:text-accent transition" href="#projects">Projects</a></li>
+      <li><a class="hover:text-accent transition" href="#milestones">Experience &amp; Certifications</a></li>
+      <li><a class="hover:text-accent transition" href="#contact">Contact</a></li>
+    </ul>
+    <div class="flex items-center gap-2">
+      <a href="#contact" class="md:hidden text-sm font-medium px-3 py-2 rounded-lg bg-sky-100 text-sky-700 border border-sky-200">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="home" class="relative overflow-hidden">
+  <div class="glow -top-24 -left-24"></div><div class="glow top-40 right-0" style="background:#f8c8d8"></div>
+  <div class="relative max-w-6xl mx-auto px-5 pt-14 pb-24 md:pt-24 md:pb-32 flex flex-col-reverse md:flex-row items-center gap-10 md:gap-14">
+   <div class="flex-1">
+    <h1 class="mt-2 font-display font-bold text-4xl sm:text-5xl md:text-6xl leading-[1.08] text-slate-600 max-w-4xl">
+      Hi, I'm <span class="text-accent">Yasmin Hawary</span>. I build scalable
+      <span class="bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">data pipelines, backends &amp; ML models.</span>
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg text-slate-500">
+      Forward-thinking AI &amp; Data Science undergraduate experienced in supervised and unsupervised machine learning algorithms, predictive analytics, and systems development. Passionate about solving complex challenges with data-driven solutions.
+    </p>
+    <div class="mt-9 flex flex-wrap gap-3">
+      <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-100 text-sky-700 border border-sky-200 font-semibold hover:bg-sky-200 hover:-translate-y-0.5 transition">View Projects</a>
+      <a href="cv.pdf" target="_blank" download class="px-6 py-3 rounded-xl border border-slate-200 font-semibold hover:border-accent hover:text-accent transition">Download CV</a>
+    </div>
+    <!-- Links (GitHub & LinkedIn) -->
+    <div class="mt-8 flex items-center gap-6 text-sm font-medium">
+      <a class="inline-flex items-center gap-2 hover:text-accent transition" href="https://github.com/yasmina109" target="_blank" rel="noopener">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>GitHub ↗</span>
+      </a>
+
+      <a class="inline-flex items-center gap-2 hover:text-accent transition" href="https://www.linkedin.com/in/yasmin-mohamed-43689036b" target="_blank" rel="noopener">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        <span>LinkedIn ↗</span>
+      </a>
+    </div>
+   </div>
+   <!-- Photo Container -->
+   <div class="shrink-0 p-2 rounded-full bg-gradient-to-br from-yellow-200 via-amber-100 to-pink-200 shadow-xl shadow-amber-100/60">
+     <img id="photo" alt="Portrait of Yasmin Hawary" width="384" height="384" class="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full object-cover border-4 border-white bg-amber-50" style="object-position: center 65%;"
+       src="profile.jpg" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Crect width=\'100\' height=\'100\' fill=\'%23f7ebd9\'/%3E%3Ccircle cx=\'50\' cy=\'38\' r=\'17\' fill=\'%23e3c9a8\'/%3E%3Cpath d=\'M16 92c4-26 20-34 34-34s30 8 34 34z\' fill=\'%23e3c9a8\'/%3E%3C/svg%3E'">
+   </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="max-w-6xl mx-auto px-5 py-20">
+  <div class="reveal grid md:grid-cols-3 gap-10">
+    <div>
+      <p class="text-accent text-sm font-semibold tracking-widest uppercase">About</p>
+      <h2 class="mt-2 font-display font-semibold text-3xl text-slate-600">Analyst by curiosity, engineer by training.</h2>
+    </div>
+    <div class="md:col-span-2 space-y-4 text-slate-500">
+      <p>I'm pursuing a Bachelor of Science in Computer Science and Artificial Intelligence at <strong class="text-slate-600">Capital University</strong>.</p>
+      <p>My technical focus revolves around machine learning workflows, predictive analytics, relational database modeling, and backend software engineering. I enjoy feature engineering, preprocessing complex datasets, and writing modular, structured code.</p>
+      <p>Beyond coursework, I have served as a Game Development Mentor with IEEE Student Branch, mentoring teams through full game prototyping lifecycles, and I am actively undergoing rigorous training in the IBM Data Scientist track under DEPI.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="max-w-6xl mx-auto px-5 py-20">
+  <div class="reveal">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Skills</p>
+    <h2 class="mt-2 font-display font-semibold text-3xl text-slate-600">Tech stack</h2>
+    <div id="skillGrid" class="mt-10 grid sm:grid-cols-2 gap-5"></div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="max-w-6xl mx-auto px-5 py-20">
+  <div class="reveal">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Featured Projects</p>
+    <h2 class="mt-2 font-display font-semibold text-3xl text-slate-600">Systems, Simulation &amp; Game Development</h2>
+    <div id="projectGrid" class="mt-10 grid md:grid-cols-2 gap-7"></div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE & CERTIFICATIONS ============ -->
+<section id="milestones" class="max-w-4xl mx-auto px-5 py-20">
+  <div class="reveal">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Experience &amp; Certifications</p>
+    <h2 class="mt-2 font-display font-semibold text-3xl text-slate-600">Journey so far</h2>
+    <ol id="timeline" class="mt-10 relative border-l border-slate-200 ml-2 space-y-8"></ol>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="max-w-4xl mx-auto px-5 py-20">
+  <div class="reveal relative overflow-hidden rounded-3xl border border-slate-200 bg-[#fffdf9] p-6 sm:p-10">
+    <div class="glow -right-24 -top-24" style="width:300px;height:300px"></div>
+    <div class="relative grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-2">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase">Contact</p>
+        <h2 class="mt-2 font-display font-semibold text-3xl text-slate-600">Let's build something.</h2>
+        <p class="mt-3 text-slate-500">6th of October, Giza, Egypt. Open to internships, research, and technical collaborations.</p>
+        <p class="mt-2 text-sm text-slate-600 font-medium">+20 1226288350</p>
+        <p class="mt-1 text-sm text-accent font-medium select-all">yasmynmhmd900@gmail.com</p>
+      </div>
+      <form id="contactForm" class="md:col-span-3 space-y-4">
+        <label class="block text-sm font-medium">Name
+          <input required name="name" class="mt-1 w-full px-4 py-3 rounded-xl bg-slate-100 border border-transparent focus:border-accent focus:outline-none"></label>
+        <label class="block text-sm font-medium">Email
+          <input required type="email" name="email" class="mt-1 w-full px-4 py-3 rounded-xl bg-slate-100 border border-transparent focus:border-accent focus:outline-none"></label>
+        <label class="block text-sm font-medium">Message
+          <textarea required name="message" rows="4" class="mt-1 w-full px-4 py-3 rounded-xl bg-slate-100 border border-transparent focus:border-accent focus:outline-none"></textarea></label>
+        <button class="px-6 py-3 rounded-xl bg-sky-100 text-sky-700 border border-sky-200 font-semibold hover:bg-sky-200 transition">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-slate-200 py-8 text-sm">
+  <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row gap-4 justify-between items-center">
+    <p>© <span id="year"></span> Yasmin Hawary. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <a class="inline-flex items-center gap-1.5 hover:text-accent transition" href="https://github.com/yasmina109" target="_blank" rel="noopener">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+      <a class="inline-flex items-center gap-1.5 hover:text-accent transition" href="https://www.linkedin.com/in/yasmin-mohamed-43689036b" target="_blank" rel="noopener">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= CONTENT ================= */
+const skills = [
+  { title: 'Programming Languages', items: ['Python','C++','C','Java','C#','SQL'] },
+  { title: 'AI & Data Science', items: ['Machine Learning','Predictive Analytics','Data Wrangling','Pandas','NumPy','Matplotlib'] },
+  { title: 'Core CS & Architecture', items: ['OOP','Data Structures & Algorithms','Systems Analysis','Operating Systems'] },
+  { title: 'Tools & Technologies', items: ['Unity Engine','Cisco Packet Tracer','MySQL','HTML','CSS','Git','GitHub'] }
+];
+
+const projects = [
+  { 
+    title: 'Interactive CPU Scheduler Simulator', 
+    summary: 'Interactive simulation and visualization platform for OS process scheduling algorithms, rendering animated execution pipelines and Gantt charts.',
+    image: 'OS.png',
+    tags: ['Round Robin (RR)','SRTF','Interactive Visualization','Gantt Chart','OS Metrics'],
+    points: [
+      'Simulates Round Robin (RR) and Shortest Remaining Time First (SRTF) scheduling step-by-step',
+      'Provides an animated Live Pipeline illustrating ready queues, CPU dispatch, and context switching',
+      'Renders dynamic Gantt charts and computes exact Waiting Time and Turnaround Time metrics',
+      'Engineered to simplify algorithm comparative analysis through clean UI and real-time step controls'
+    ],
+    status: 'OS Simulation'
+  },
+  { 
+    title: 'PathToTreasure — 2D Adventure Game', 
+    summary: 'A 2D exploration and adventure game built in Unity following an expedition across dynamic environments to uncover hidden treasure.',
+    image: 'Game.png',
+    tags: ['Unity','C#','2D Physics','Level Design','Game Mechanics'],
+    points: [
+      'Designed multi-biome exploration journeys across dense forests, abandoned ships, and submerged areas',
+      'Engineered responsive interactive mechanics, platforming challenges, item collection, and obstacle avoidance',
+      'Crafted custom atmospheres and distinct levels combining exploration, hazard navigation, and puzzle solving',
+      'Implemented clean character controls, status HUD interfaces, and interactive environmental elements'
+    ],
+    status: 'Unity Game'
+  },
+  { 
+    title: 'Enterprise Branch WAN & Cloud Network', 
+    summary: 'Practical enterprise topology designed from scratch in Cisco Packet Tracer linking a Branch Office to a Private Cloud via ISP and Regional Hub.',
+    image: 'Network.jpeg',
+    tags: ['Cisco Packet Tracer','VLANs','VLSM','Static Routing','VPN Tunnel','NAT / PAT'],
+    points: [
+      'Segmented branch infrastructure into VLANs and optimized IP allocation using VLSM addressing schemes',
+      'Configured automated DHCP leasing and established an encrypted VPN Tunnel for secure Private Cloud server access',
+      'Implemented Static Routing across WAN nodes along with Static NAT for external Web Server access and PAT for secure outbound traffic',
+      'Conducted end-to-end ICMP verification and path diagnostic troubleshooting across multi-tier gateways'
+    ],
+    status: 'Network Topology'
+  },
+  { 
+    title: 'WDI Education & Demographic Analysis', 
+    summary: 'Exploratory data analysis investigating multi-decade education expansion and demographic trends across the Arab World and MENA region.',
+    image: 'WDI.png',
+    tags: ['Python','Pandas','SQLite','Matplotlib','Exploratory Data Analysis'],
+    points: [
+      'Executed SQL queries across the World Development Indicators database to filter and normalize educational metrics',
+      'Analyzed primary vs. secondary school enrollment trajectories against adolescent fertility rate shifts',
+      'Constructed publication-grade multi-series statistical line charts uncovering regional demographic patterns'
+    ],
+    status: 'Data Science Case Study'
+  }
+];
+
+const milestones = [
+  { 
+    date: 'Jul, 2026 – Present', 
+    type: 'Training & Internship', 
+    title: 'AI & Data Science Trainee — Digital Egypt Pioneers Initiative (DEPI)', 
+    desc: 'Engaging in rigorous training within the IBM Data Scientist curriculum, focusing on machine learning and predictive analytics, feature engineering, and preprocessing datasets using Python and SQL.',
+    link: ''
+  },
+  { 
+    date: 'Aug, 2026', 
+    type: 'Certification', 
+    title: 'Programming for Everybody (Getting Started with Python)', 
+    desc: 'University of Michigan (Coursera) — Comprehensive foundation in Python syntax, programming logic, and algorithmic thinking.',
+    link: 'https://drive.google.com/file/d/1dylMyRq5hmezlbAbH0yJVREgndbNyyOA/view?usp=sharing'
+  },
+  { 
+    date: 'Jul, 2026', 
+    type: 'Certification', 
+    title: 'Introduction to Data Science', 
+    desc: 'Cisco Networking Academy — Core data science concepts, data wrangling pipelines, and analytical problem-solving.',
+    link: 'https://drive.google.com/file/d/1t3CKEdMSy_vSLfdGMFgDpYf6k9BlLfjp/view?usp=sharing'
+  },
+  { 
+    date: '6th – 19th Sept, 2025', 
+    type: 'Mentorship', 
+    title: 'TechVerse Bootcamp 3.0 Mentor — IEEE FCIH Student Branch', 
+    desc: 'Served as Mentor guiding participants through game development architectures, technical logic building, and evaluating final project implementations.',
+    link: 'https://drive.google.com/file/d/1exSt3VSDqJFubEKQ7IAR4hzWon16rwzi/view?usp=sharing'
+  },
+  { 
+    date: 'Season 25', 
+    type: 'Extracurricular & Activity', 
+    title: 'Game Dev Committee Member — IEEE FCIH Student Branch', 
+    desc: 'Active member contributing to committee initiatives, technical workshops, and game development sessions throughout Season 25.',
+    link: 'https://drive.google.com/file/d/1mSbfCKMnqsmooR30EAkJtQJwCR6uHQsj/view?usp=sharing'
+  }
+];
+
+/* ================= RENDERING ================= */
+const chip = 'px-3 py-1 text-xs font-medium rounded-full border border-slate-200 bg-slate-100 hover:border-accent hover:text-accent transition';
+document.getElementById('skillGrid').innerHTML = skills.map(s => `
+  <div class="card p-6 rounded-2xl border border-slate-200 bg-[#fffdf9]">
+    <h3 class="font-display font-semibold text-lg text-slate-600">${s.title}</h3>
+    <div class="mt-4 flex flex-wrap gap-2">${s.items.map(i => `<span class="${chip}">${i}</span>`).join('')}</div>
+  </div>`).join('');
+
+document.getElementById('projectGrid').innerHTML = projects.map(p => `
+  <article class="card flex flex-col rounded-2xl border border-slate-200 bg-[#fffdf9] overflow-hidden shadow-sm">
+    <!-- Project Thumbnail Banner -->
+    <div class="h-48 sm:h-52 w-full bg-slate-100 overflow-hidden relative border-b border-slate-200/80">
+      <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover object-center transition duration-300 hover:scale-105" onerror="this.parentElement.innerHTML='<div class=\\\'w-full h-full flex items-center justify-center text-xs text-slate-400 bg-amber-50/50 font-medium\\\'>Snapshot Preview</div>'">
+    </div>
+    <div class="p-6 flex flex-col flex-1">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-display font-semibold text-xl text-slate-600 leading-snug">${p.title}</h3>
+        <span class="shrink-0 px-2.5 py-1 text-[11px] font-medium rounded-md bg-sky-100 text-sky-700 border border-sky-200">${p.status}</span>
+      </div>
+      <p class="mt-2.5 text-sm text-slate-500 leading-relaxed">${p.summary}</p>
+      <div class="mt-4 flex flex-wrap gap-2">${p.tags.map(t => `<span class="${chip}">${t}</span>`).join('')}</div>
+      <ul class="mt-5 space-y-2 text-sm flex-1">${p.points.map(x => `<li class="flex gap-2"><span class="text-accent">▹</span><span class="text-slate-600">${x}</span></li>`).join('')}</ul>
+    </div>
+  </article>`).join('');
+
+document.getElementById('timeline').innerHTML = milestones.map(m => `
+  <li class="ml-6 relative">
+    <span class="absolute -left-[31px] top-1.5 w-3 h-3 rounded-full bg-accent ring-4 ring-white"></span>
+    <div class="card p-5 rounded-xl border border-slate-200 bg-[#fffdf9]">
+      <div class="flex items-start justify-between gap-2">
+        <p class="text-xs font-medium text-accent">${m.date} · ${m.type}</p>
+        ${m.link ? `<a href="${m.link}" target="_blank" rel="noopener" class="shrink-0 text-xs font-semibold text-sky-700 bg-sky-100 hover:bg-sky-200 border border-sky-200 px-2.5 py-1 rounded-md transition">View Certificate ↗</a>` : ''}
+      </div>
+      <h3 class="mt-1 font-display font-semibold text-slate-600">${m.title}</h3>
+      <p class="mt-1 text-sm text-slate-500">${m.desc}</p>
+    </div>
+  </li>`).join('');
+
+/* ================= BEHAVIOR ================= */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = encodeURIComponent(`${f.get('message')}\n\n— ${f.get('name')} (${f.get('email')})`);
+  window.location.href = `mailto:yasmynmhmd900@gmail.com?subject=${encodeURIComponent('Portfolio inquiry from ' + f.get('name'))}&body=${body}`;
+});
+</script>
+</body>
+</html>
